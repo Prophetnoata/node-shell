@@ -1,6 +1,7 @@
+//import { pwd } from "./pwd.js";
+const pwd = require("./pwd.js");
 //Output a prompt
 process.stdout.write("prompt > ");
-import { cwd } from 'node:process';
 
 // The stdin 'data' event fires after a user types in a line
 process.stdin.on("data", (data) => {
@@ -8,7 +9,7 @@ process.stdin.on("data", (data) => {
 
   //   process.stdout.write('You typed: ' + cmd);
   if (cmd === "pwd") {
-    process.stdout.write(cwd());
+    pwd();
   }
   process.stdout.write("\nprompt > ");
 });
