@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const ls = () => {
+module.exports = ls = () => {
   return fs.readdir("./", "utf8", (err, files) => {
     if (err) {
       throw err;
@@ -10,5 +10,3 @@ const ls = () => {
     }
   });
 };
-
-module.exports = ls;
